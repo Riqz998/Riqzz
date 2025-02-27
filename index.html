@@ -1,97 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Riq - Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portofolio Saya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .hero-section {
+            padding: 100px 0;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+        }
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" text-light sticky-top>
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">MyPorto</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about/">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Other
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="/contact">Contact</a></li>
-                  <li><a class="dropdown-item" href="/galery">Gallery</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/sosmed">Sosmed</a></li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portofolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Gambar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
                 </ul>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-      <div class="container-fluid bg-dark text-light" style="height: 125vh;">
-
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" >
-              <img src="assets/Danau-Toba-edited.png" class="d-block w-100" alt="ppp" style="height: 500px;">
-              <div class="carousel-caption">
-                <h5>Danau Toba</h5>
-                <p></p>
-              </div>
             </div>
-            <div class="carousel-item">
-              <img src="assets/pulau-padar.png" class="d-block w-100" alt="ppp" style="height: 500px;">
-              <div class="carousel-caption">
-                <h5>Pulau Padar"</h5>
-                <p></p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="assets/raja-ampat-1024x683.png" class="d-block w-100" alt="ppp" style="height: 500px;">
-              <div class="carousel-caption">
-                <h5>Raja Ampat</h5>
-                <p></p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-
-        <div class="row align-items-center">
-          <div class="col-8 border">
-            WELLCOME TO MY Homepage
-          </div>
-          <div class="col-4 border">
-            <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg" alt="my image" style="width: 100%;">
-          </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5 hero-section">
+        <div class="container">
+            <h1>Halo, Nama Saya Erik</h1>
+            <p>Web Developer | Designer | Freelancer</p>
         </div>
-      </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about" class="py-5 hidden">
+        <div class="container text-center">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah seorang pengembang web dengan pengalaman dalam HTML, CSS, JavaScript, dan Bootstrap.</p>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light hidden">
+        <div class="container text-center">
+            <h2>Proyek Saya</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Proyek 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Gambar 1</h5>
+                            <p class="card-text">ERIK SHANDIKA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1506372023823-741c83b836fe?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Proyek 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Gambar 2</h5>
+                            <p class="card-text">ERIK SHANDIKA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://plus.unsplash.com/premium_photo-1674327105074-46dd8319164b?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmVlfGVufDB8fDB8fHww" class="card-img-top" alt="Proyek 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Gambar 3</h5>
+                            <p class="card-text">ERIK SHANDIKA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 hidden">
+        <div class="container text-center">
+            <h2>Kontak</h2>
+            <p>Hubungi saya di erikshandika123@example.com atau melalui media sosial.</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>&copy; <span id="currentYear"></span> Erik. Semua Hak Dilindungi.</p>
+    </footer>
+    
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Scroll Animation
+        const sections = document.querySelectorAll('.hidden');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
